@@ -1,5 +1,6 @@
 package com.example.moviecounter
-
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Card
@@ -26,4 +27,15 @@ fun DemoCardAndFab() {
     FloatingActionButton(onClick = { }) {
         Text("+")
     }
+}
+@Composable
+fun DemoAlertDialog() {
+    AlertDialog(
+        onDismissRequest = { },
+        confirmButton = {
+            TextButton(onClick = { }) { Text("OK") }
+        },
+        title = { Text("Aviso") },
+        text = { Text("Este es un AlertDialog de prueba.") }
+    )
 }
